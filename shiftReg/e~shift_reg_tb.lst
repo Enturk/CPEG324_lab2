@@ -1,8 +1,0 @@
->/usr/local/lib/gcc/x86_64-linux-gnu/4.9.3/vhdl//v93/ieee/
-../../src/ieee/std_logic_1164.v93
->/usr/local/lib/gcc/x86_64-linux-gnu/4.9.3/vhdl//v93/ieee/
-../../src/ieee/std_logic_1164_body.v93
->
-shift_reg_tb.vhdl
->
-shift_reg.vhdl
