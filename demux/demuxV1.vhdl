@@ -12,8 +12,10 @@ begin
   begin
     if(sel = '0') then
       dOut0 <= dIn;
+      dOut1 <= '0';
     else
       dOut1 <= dIn;
+      dOut0 <= '0';
     end if;
   end process;
 end behavioral;
