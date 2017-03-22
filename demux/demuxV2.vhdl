@@ -12,7 +12,7 @@ entity demuxV2 is
   --generic( selWidth : natural := integer(ceil(log2(real(width)))));
   port(dIn : in std_logic;
        --sel : in std_logic_vector(selWidth-1 downto 0); --1 to 8
-       sel : in std_logic_vector(natural(ceil(log2(real(width-1)))) downto 0);
+       sel : in std_logic_vector(natural(ceil(log2(real(width))))-1 downto 0);
        muxOut : out std_logic_vector(width-1 downto 0));
 end demuxV2;
 
@@ -22,7 +22,7 @@ signal selSig : std_logic_vector(natural(ceil(log2(real(width-1)))) downto 0);
 begin
 
 --generate select
-  process is 
+  process (sel) is 
   variable my_line : line;
   begin
   g:for i in sel'range loop
