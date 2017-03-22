@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
-use ieee.nemeric_std.all;
-use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
+--use ieee.std_logic_unsigned.all;
 
 entity adderFourBit is
   port(in0, in1 : in std_logic_vector(3 downto 0 );
@@ -28,10 +28,11 @@ a0 : adder
     addOut => addOut(0),
     cOut => cSig(0));
 
-a1to2 for i in 1 to 3 generate
+a1to2 : for i in 1 to 3 generate
+a1 : adder
   port map(i0 => in0(i),
            i1 => in1(i),
-           cIn => cSig(i-1));
+           cIn => cSig(i-1),
            addOut => addOut(i),
            cOut => cSig(1));
 end generate;
