@@ -29,6 +29,7 @@ begin
     write(my_line, string'("Hello World!"));
     writeline(output, my_line);	    
   end loop;
+  wait;
   end process;
 
 
